@@ -1,0 +1,21 @@
+:root {
+  /*place to put in variables*/
+  --btn-base-background: #33B679;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+
+  min-height: 100vh;
+}
