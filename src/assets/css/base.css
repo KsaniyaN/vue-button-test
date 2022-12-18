@@ -1,6 +1,16 @@
 :root {
   /*place to put in variables*/
+  /*colors naming can be optimised - as these are obviously can be used for the whole theme of the project, not only buttons*/
   --btn-base-background: #33B679;
+
+  /*50 shades of grey*/
+  --btn-ghost-background: #FFF;
+  --btn-ghost-background--disabled: #F7F8FA;
+  --btn-ghost-border-color: #D7DAE0;
+  --btn-ghost-border-color--hover: #9096A3;
+  --btn-ghost-border-color--active: #626A7A;
+  --btn-ghost-font-color: #0A0E14;
+  --btn-ghost-font-color--disabled: #9096A3;
 }
 
 *,

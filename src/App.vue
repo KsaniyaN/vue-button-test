@@ -10,16 +10,30 @@
             <!-- setting disabled state based on conditions -->
             <!-- setting loading state depending on http call state aka `loading: http.state.loading`  -->
             <!-- setting custom method on click  -->
-            <Button @click="" v-bind="{disabled: false, loading:false}">Standard</Button>
+            <Button @click="" v-bind="{disabled: false, loading:false}">Button</Button>
 
             <Button @click="" v-bind="{disabled: false, loading:true}">
-                <template #left><plus-icon /></template>
+                <template #left>
+                    <plus-icon />
+                </template>
                 Button
             </Button>
 
-            <Button @click="" v-bind="{disabled: true, loading:false}">Disabled</Button>
+            <Button @click="" v-bind="{disabled: true, loading:false}">Button</Button>
         </div>
-        <div style="text-align: center; position: relative; top: -35px; left: -3px; opacity: 0.5;"><img src="@/assets/test.png" alt=""></div>
+        <div style="text-align: center; position: relative; top: -35px; left: 96px; opacity: 0.5; width: 144px;"><img
+            src="@/assets/test.png" alt=""></div>
+
+        <div class="btns-group ghost">
+            <Button @click="" v-bind="{disabled: false, loading:false}">Button</Button>
+            <Button @click="" v-bind="{disabled: false, loading:true}">
+                <template #left>
+                    <plus-icon />
+                </template>
+                Button
+            </Button>
+            <Button @click="" v-bind="{disabled: true, loading:false}">Button</Button>
+        </div>
     </main>
 </template>
 

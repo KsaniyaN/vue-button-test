@@ -24,6 +24,9 @@
             For example I had to increase plus icon dimensions to 17x17px instead of 10x10px to make the icon looking better.
             In this case I would speak to designer and ask if we need the exact pixel numbers or as close as possible visual match to design.
         + don't show plus icon in loading state
+    
+    + ghost buttons styling
+        + std, + hover, + active, + disabled states, + loader colour
 
 [vue-tabler-icons](https://www.npmjs.com/package/vue-tabler-icons)
 
@@ -37,8 +40,7 @@
     > a button with badge
     > a button with icon and badge
     > icon only + badge
-    > a button with a dropdown
-    > ghost buttons styling
+    > a button with a dropdown as a sep btn\sep action
     > medium buttons styling
     > small buttons styling
     > remove extra comments, console logs, clean up code

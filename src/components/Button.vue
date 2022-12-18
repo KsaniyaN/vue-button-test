@@ -1,10 +1,9 @@
 <template>
-    <bold-icon />
     <button v-bind="{name, disabled: isDisabled, loading: isLoading}"
             type="button"
             :class="{ disabled: isDisabled, loading: isLoading }"
             @click.stop="click">
-        <span class="left" v-if="!!$slots.left && !isLoading"><slot name="left"></slot></span>
+        <span class="left" v-if="!!$slots.left"><slot name="left"></slot></span>
         <span class="name"><slot /></span>
         <span class="loader" v-show="isLoading">
             <Loader />
@@ -95,6 +94,7 @@ button.disabled {
     padding-right: 17px;
 }
 
+.loading .left,
 .loading .name {
     display: none;
 }
@@ -106,6 +106,29 @@ button.disabled {
     top: 1px;
 }
 
+.ghost button {
+    background: var(--btn-ghost-background);
+    border: 1px solid var(--btn-ghost-border-color);
+    color: var(--btn-ghost-font-color);
+}
+
+.ghost button:hover {
+    border-color: var(--btn-ghost-border-color--hover);
+}
+
+.ghost button:active {
+    border-color: var(--btn-ghost-border-color--active);
+}
+
+.ghost button.disabled {
+    background: var(--btn-ghost-background--disabled);
+    color: var(--btn-ghost-font-color--disabled);
+}
+
+.ghost .loader {
+    fill: #626A7A;
+}
+
 @media (min-width: 1024px) {
     button {
         padding: 10px 20px;
@@ -113,9 +136,10 @@ button.disabled {
 
     .left {
         position: relative;
-        top: 2px;
+        top: 3px;
     }
 
+    .loading .left,
     .loading .name {
         display: inline;
     }
