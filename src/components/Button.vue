@@ -1,12 +1,15 @@
 <template>
+    <bold-icon />
     <button v-bind="{name, disabled: isDisabled, loading: isLoading}"
             type="button"
             :class="{ disabled: isDisabled, loading: isLoading }"
             @click.stop="click">
+        <span class="left" v-if="!!$slots.left && !isLoading"><slot name="left"></slot></span>
         <span class="name"><slot /></span>
         <span class="loader" v-show="isLoading">
             <Loader />
         </span>
+        <span class="right" v-if="!!$slots.right"><slot name="right"></slot></span>
     </button>
 </template>
 
@@ -52,6 +55,9 @@ export default {
 <style scoped>
 
 button {
+    display: flex;
+    align-items: center;
+
     background: var(--btn-base-background);
     border: none;
     border-radius: 8px;
@@ -85,6 +91,10 @@ button.disabled {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), var(--btn-base-background);
 }
 
+.left {
+    padding-right: 17px;
+}
+
 .loading .name {
     display: none;
 }
@@ -98,7 +108,12 @@ button.disabled {
 
 @media (min-width: 1024px) {
     button {
-       padding: 10px 20px;
+        padding: 10px 20px;
+    }
+
+    .left {
+        position: relative;
+        top: 2px;
     }
 
     .loading .name {

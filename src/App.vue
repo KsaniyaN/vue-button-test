@@ -12,10 +12,14 @@
             <!-- setting custom method on click  -->
             <Button @click="" v-bind="{disabled: false, loading:false}">Standard</Button>
 
-            <Button @click="" v-bind="{disabled: false, loading:true}">Loading</Button>
+            <Button @click="" v-bind="{disabled: false, loading:true}">
+                <template #left><plus-icon /></template>
+                Button
+            </Button>
 
             <Button @click="" v-bind="{disabled: true, loading:false}">Disabled</Button>
         </div>
+        <div style="text-align: center; position: relative; top: -35px; left: -3px; opacity: 0.5;"><img src="@/assets/test.png" alt=""></div>
     </main>
 </template>
 
@@ -23,6 +27,7 @@
 import "@fontsource/inter";
 import HelloWorld from '@/components/HelloWorld.vue'
 import Button from "@/components/Button.vue";
+import {PlusIcon} from "vue-tabler-icons";
 </script>
 
 <style scoped>
