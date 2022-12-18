@@ -18,7 +18,6 @@ import Loader from "@/components/Loader.vue";
 export default {
     components: {Loader},
     props: {
-        name: null,
         loading: {type: Boolean, default: false},
         disabled: {type: Boolean, default: false}
     },
@@ -27,17 +26,6 @@ export default {
         return {
             isDisabled: this.disabled,
             isLoading: this.loading
-        }
-    },
-
-    watch: {
-        disabled() {
-            this.isDisabled = this.disabled;
-        },
-
-        loading() {
-            this.isLoading = this.loading;
-            this.isDisabled = this.loading || this.disabled;
         }
     },
 
