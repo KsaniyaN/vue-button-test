@@ -63,6 +63,7 @@ button {
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
+    line-height: 20px;
 
     padding: 10px 13px;
 }
@@ -106,6 +107,7 @@ button.disabled {
 
     .loader {
         margin-left: 8px;
+        top: 2px;
     }
 }
 
